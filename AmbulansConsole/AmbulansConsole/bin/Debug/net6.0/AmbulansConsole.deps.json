@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AmbulansConsole/1.0.0": {
+        "runtime": {
+          "AmbulansConsole.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AmbulansConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

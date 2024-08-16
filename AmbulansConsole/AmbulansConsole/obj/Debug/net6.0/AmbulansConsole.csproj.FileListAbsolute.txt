@@ -1,0 +1,14 @@
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\bin\Debug\net6.0\AmbulansConsole.exe
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\bin\Debug\net6.0\AmbulansConsole.deps.json
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\bin\Debug\net6.0\AmbulansConsole.runtimeconfig.json
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\bin\Debug\net6.0\AmbulansConsole.dll
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\bin\Debug\net6.0\AmbulansConsole.pdb
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\obj\Debug\net6.0\AmbulansConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\obj\Debug\net6.0\AmbulansConsole.AssemblyInfoInputs.cache
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\obj\Debug\net6.0\AmbulansConsole.AssemblyInfo.cs
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\obj\Debug\net6.0\AmbulansConsole.csproj.CoreCompileInputs.cache
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\obj\Debug\net6.0\AmbulansConsole.dll
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\obj\Debug\net6.0\refint\AmbulansConsole.dll
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\obj\Debug\net6.0\AmbulansConsole.pdb
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\obj\Debug\net6.0\AmbulansConsole.genruntimeconfig.cache
+C:\Users\Cansu Arslanalp\source\repos\AmbulansConsole\AmbulansConsole\obj\Debug\net6.0\ref\AmbulansConsole.dll

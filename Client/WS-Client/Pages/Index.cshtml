@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<html>
+<head>
+    <title>WebSocket Client</title>
+</head>
+<body>
+    <h1>WebSocket Client</h1>
+
+    <div id="messages"></div>
+    <script>
+        const ws = new WebSocket("wss://localhost:7079/ws");
+
+        ws.onopen = () => {
+            console.log("WebSocket bağlantısı açıldı.");
+            document.getElementById("messages").innerHTML += "<p>Bağlantı açıldı!</p>";
+        };
+
+        ws.onmessage = (event) => {
+            console.log("Mesaj alındı: " + event.data);
+            document.getElementById("messages").innerHTML += `<p>Gönderdi: ${event.data}</p>`;
+        };
+
+        ws.onclose = () => {
+            console.log("WebSocket bağlantısı kapatıldı.");
+            document.getElementById("messages").innerHTML += "<p>Bağlantı kapatıldı.</p>";
+        };
+
+        ws.onerror = (error) => {
+            console.error("WebSocket hatası: " + error.message);
+        };
+    </script>
+</body>
+</html>

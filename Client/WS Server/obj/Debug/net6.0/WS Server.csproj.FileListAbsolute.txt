@@ -1,0 +1,25 @@
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\bin\Debug\net6.0\appsettings.json
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\bin\Debug\net6.0\WS Server.exe
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\bin\Debug\net6.0\WS Server.deps.json
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\bin\Debug\net6.0\WS Server.runtimeconfig.json
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\bin\Debug\net6.0\WS Server.dll
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\bin\Debug\net6.0\WS Server.pdb
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\WS Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\WS Server.AssemblyInfoInputs.cache
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\WS Server.AssemblyInfo.cs
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\WS Server.csproj.CoreCompileInputs.cache
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\WS Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\staticwebassets\msbuild.WS Server.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\staticwebassets\msbuild.build.WS Server.props
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.WS Server.props
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WS Server.props
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\scopedcss\bundle\WS Server.styles.css
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\WS Server.dll
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\refint\WS Server.dll
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\WS Server.pdb
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\WS Server.genruntimeconfig.cache
+C:\Users\Cansu Arslanalp\source\repos\Client\WS Server\obj\Debug\net6.0\ref\WS Server.dll

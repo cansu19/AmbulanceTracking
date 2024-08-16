@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulans Takip - Leaflet</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ambulans Takip - Leaflet</h1>
+
+    <label for="filterPlate">Plakaya göre filtrele:</label>
+    <input type="text" id="filterPlate" placeholder="Filtrelenecek ambulans plakası">
+    <button id="filterButton">Filtrele</button>
+    <button id="showAllButton">Tümünü Göster</button>
+
+    <div id="map"></div>
+    <div id="messages"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        let ws;
+        let map;
+        let markers = {};
+        const maxChange = 0.001; 
+        const intervals = {};
+
+        map = L.map('map').setView([40.756611, 30.412142], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        const ambulanceIcon = L.divIcon({
+            className: 'ambulance-icon',
+            html: '<div style="font-size: 24px;">🚑</div>',
+            iconSize: [24, 24]
+        });
+
+        ws = new WebSocket('wss://localhost:7080/ws');
+
+        document.getElementById("filterButton").onclick = function () {
+            const filterPlate = document.getElementById("filterPlate").value;
+
+            Object.keys(markers).forEach(plate => {
+                if (plate === filterPlate) {
+                    map.addLayer(markers[plate]);
+                } else {
+                    map.removeLayer(markers[plate]);
+                }
+            });
+        };
+
+        document.getElementById("showAllButton").onclick = function () {
+            Object.keys(markers).forEach(plate => {
+                map.addLayer(markers[plate]);
+            });
+        };
+
+        ws.onmessage = (event) => {
+            const message = event.data;
+            console.log("Received message:", message);
+
+            const dataParts = message.split(':');
+            if (dataParts.length === 2) {
+                const ambulancePlate = dataParts[0].trim();
+                const coords = dataParts[1].trim().split(',');
+
+                if (coords.length === 2) {
+                    const newX = parseFloat(coords[0].trim());
+                    const newY = parseFloat(coords[1].trim());
+
+                    if (!isNaN(newX) && !isNaN(newY)) {
+                        if (!markers[ambulancePlate]) {
+                            markers[ambulancePlate] = L.marker([newX, newY], { icon: ambulanceIcon })
+                                .addTo(map)
+                                .bindPopup(`Ambulans: ${ambulancePlate}`)
+                                .openPopup();
+                        } else {
+                            markers[ambulancePlate].setLatLng([newX, newY]);
+                        }
+
+                        if (!intervals[ambulancePlate]) {
+                            intervals[ambulancePlate] = setInterval(() => {
+                                const changeAxis = Math.random() > 0.5 ? 'x' : 'y';
+                                let newLat = markers[ambulancePlate].getLatLng().lat;
+                                let newLng = markers[ambulancePlate].getLatLng().lng;
+
+                                if (changeAxis === 'x') {
+                                    newLat += (Math.random() > 0.5 ? maxChange : -maxChange);
+                                } else {
+                                    newLng += (Math.random() > 0.5 ? maxChange : -maxChange);
+                                }
+
+                                markers[ambulancePlate].setLatLng([newLat, newLng]);
+
+                                const coordinatesMessage = `${ambulancePlate}:${newLat.toFixed(6)},${newLng.toFixed(6)}`;
+                                ws.send(coordinatesMessage);
+                            }, 5000);
+                        }
+                    } else {
+                        console.error(`Invalid coordinates received: [${coords[0]}, ${coords[1]}]`);
+                    }
+                } else {
+                    console.error(`Invalid coordinates format: ${dataParts[1]}`);
+                }
+            } else {
+                console.error(`Invalid message format: ${message}`);
+            }
+        };
+
+        ws.onclose = () => {
+            document.getElementById("messages").innerHTML += "<p>Bağlantı kapatıldı.</p>";
+        };
+
+        ws.onerror = (error) => {
+            console.error("WebSocket hatası: " + error.message);
+        };
+
+    </script>
+</body>
+</html>
